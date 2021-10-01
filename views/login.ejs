@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>КосМет</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css ">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #78878F;">
+      <div class="container">
+        <a class="navbar-brand" href="/"><i class="fas fa-church"></i> КосМет</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="/">Почетна страница <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/aboutUs">О нама</a>
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" href="/admin">Админ страница</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-6 offset-3 login-container">
+          <h1>Админ страница</h1>
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-prijavi-se-tab" data-toggle="tab" href="#nav-prijavi-se"
+                role="tab" aria-controls="nav-prijavi-se" aria-selected="true">Пријавите се</a>
+              <a class="nav-item nav-link" id="nav-registruj-se-tab" data-toggle="tab" href="#nav-registruj-se"
+                role="tab" aria-controls="nav-registruj-se" aria-selected="false">Региструјте се</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-prijavi-se" role="tabpanel"
+              aria-labelledby="nav-prijavi-se-tab">
+              <form class="prijavi-se-forma">
+                <div class="form-group">
+                  <label for="prijavi-se-email">Имејл адреса</label>
+                  <input type="email" class="form-control" id="prijavi-se-email" aria-describedby="emailHelp"
+                    placeholder=" Унесите имејл адресу">
+                </div>
+                <div class="form-group">
+                  <label for="prijavi-se-sifra">Шифра</label>
+                  <input type="password" class="form-control" id="prijavi-se-sifra" placeholder="Унесите шифру">
+                </div>
+                <button type="submit" class="btn btn-primary">Пријави се</button>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="nav-registruj-se" role="tabpanel" aria-labelledby="nav-registruj-se-tab">
+              <form class="registruj-se-forma">
+                <div class="form-group">
+                  <label for="registruj-se-email">Имејл адреса</label>
+                  <input type="email" class="form-control" id="registruj-se-email" aria-describedby="emailHelp"
+                    placeholder=" Унесите имејл адресу">
+                </div>
+                <div class="form-group">
+                  <label for="registruj-se-sifra">Шифра</label>
+                  <input type="password" class="form-control" id="registruj-se-sifra" placeholder="Унесите шифру">
+                </div>
+                <div class="form-group">
+                  <label for="ponovi-sifru">Поновите шифру</label>
+                  <input type="password" class="form-control" id="ponovi-sifru" placeholder="Поново унесите шифру">
+                </div>
+                <button type="submit" class="btn btn-primary">Региструј се</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 align-items-center">
+          <p class="copy">©2021, Сва права припадају Космет страници</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ страница</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #78878F;">
+            <div class="container">
+                <a class="navbar-brand" href="/"><i class="fas fa-church"></i> КосМет</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/">Почетна страница <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/aboutUs">О нама</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link " href="/admin">Админ страница</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-outline-secondary log-out-btn"> Одјави се </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container okvir">
+            <h1>Админ страница</h1>
+            <hr>
+            <div class="row">
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+                                <a class="nav-link active" id="v-pills-blogovi-tab" data-toggle="pill"
+                                    href="#v-pills-blogovi" role="tab" aria-controls="v-pills-blogovi"
+                                    aria-selected="true">Блогови</a>
+                                <a class="nav-link" id="v-pills-mejlovi-tab" data-toggle="pill" href="#v-pills-mejlovi"
+                                    role="tab" aria-controls="v-pills-mejlovi" aria-selected="false">Мејлови</a>
+                                <a class="nav-link" id="v-pills-pozivi-tab" data-toggle="pill" href="#v-pills-pozivi"
+                                    role="tab" aria-controls="v-pills-pozivi" aria-selected="false">Позиви</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-blogovi" role="tabpanel"
+                                    aria-labelledby="v-pills-blogovi-tab">
+                                    <button class="btn btn-primary dugme kreiraj-post-dugme">Додај нови блог</button>
+                                    <div class="blogovi">
+
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-mejlovi" role="tabpanel"
+                                    aria-labelledby="v-pills-mejlovi-tab">Садржај мејлова</div>
+                                <div class="tab-pane fade" id="v-pills-pozivi" role="tabpanel"
+                                    aria-labelledby="v-pills-pozivi-tab">Садржај позива</div>
+                                <div class="tab-pane fade" id="v-pills-kreiraj-post" role="tabpanel"
+                                    aria-labelledby="v-pills-kreiraj-post-tab">
+                                    <h2>Креирај нови пост</h2>
+                                    <form class="kreiraj-post-forma">
+                                        <div class="form-group">
+                                            <label for="kreiraj-naslov">Наслов</label>
+                                            <input type="text" class="form-control" id="kreiraj-naslov"
+                                                placeholder="Наслов">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="kreiraj-grad">Град</label>
+                                            <input type="text" class="form-control" id="kreiraj-grad"
+                                                placeholder="Град">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="kreiraj-sliku-url">Слика</label>
+                                            <input type="hidden" class="form-control" id="kreiraj-sliku-url"
+                                                placeholder="URL">
+
+                                            <input type="file" enctype="multipart/form-data"
+                                                class="form-control-file form-control" id="kreiraj-sliku-fajl">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="kreiraj-tekst">Текст</label>
+                                            <textarea class="form-control" id="kreiraj-tekst" rows="8"></textarea>
+                                        </div>
+                                        <button class="btn btn-primary"> Креирај пост </button>
+                                    </form>
+                                </div>
+                                <!-- Izmeni post -->
+                                <div class="tab-pane fade" id="v-pills-izmeni-post" role="tabpanel"
+                                    aria-labelledby="v-pills-izmeni-post-tab">
+                                    <h2>Измени пост</h2>
+                                    <form class="izmeni-post-forma">
+                                        <div class="form-group">
+                                            <label for="izmeni-naslov">Наслов</label>
+                                            <input type="text" class="form-control" id="izmeni-naslov"
+                                                placeholder="Наслов">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="izmeni-tekst">Текст</label>
+                                            <textarea class="form-control" id="izmeni-tekst" rows="8"></textarea>
+                                        </div>
+                                        <button class="btn btn-primary"> Измени пост </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 align-items-center">
+                    <p class="copy">©2021, Сва права припадају Космет страници</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/posts.js"></script>
+    <script src="/admin/js/kreiraj-post.js"></script>
+    <script src="/admin/js/obrisi-post.js"></script>
+    <script src="/admin/js/izmeni-post.js"></script>
+    <script src="/admin/js/pozivi.js"></script>
+    <script src="/admin/js/emails.js"></script>
+    <script src="/admin/js/main.js"></script>
+</body>
+
+</html>

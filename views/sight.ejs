@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= naslov %>
+  </title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <meta name="viewport" content="initial-scale=1.0,width=device-width" />
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css ">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #78878F;">
+      <div class="container">
+        <a class="navbar-brand" href="/"><i class="fas fa-church"></i> КосМет</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Почетна страница <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/aboutUs">О нама</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/admin">Админ страница</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0 pozovi-me-forma">
+            <input class="form-control mr-sm-2" type="search" placeholder="Број телефона" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Позовите</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container sight-container">
+      <h1>
+        <%= naslov %>
+      </h1>
+      <hr>
+      <img src="<%= slikaURL %>" alt="Decani">
+      <hr>
+      <p class="datum">
+        <%= datum %>
+      </p>
+      <hr>
+      <p class="tekst">
+        <%= tekst %>
+      </p>
+      <div class="map"></div>
+    </div>
+  </main>
+  <footer >
+    <div class="container">
+      <div class="row">
+        <div class="col-6 align-items-center">
+          <p class="copy">©2021, Сва права припадају Космет страници</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/mape.js"></script>
+</body>
+</html>
